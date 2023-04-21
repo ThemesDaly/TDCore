@@ -18,7 +18,7 @@ To implement hyper casual and hybrid projects.
 ###  MonoModule
 #### Example
 ```
-namespace TDC.BaseController
+namespace TDCore.BaseController
 
 class PlayerController : MonoModule
 {
@@ -32,7 +32,7 @@ class PlayerController : MonoModule
 ### MonoController
 #### Example
 ```
-namespace TDC.BaseController
+namespace TDCore.BaseController
 
 class GameManager : MonoController
 {
@@ -48,7 +48,7 @@ class GameManager : MonoController
  ### MonoWindow
  #### Example
 ```
-namespace TDC.UI
+namespace TDCore.UI
 
 class WindowGameplay : MonoWindow
 {
