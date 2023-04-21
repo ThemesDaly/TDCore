@@ -7,7 +7,7 @@ using DG.Tweening;
 using TDC.UI;
 
 [RequireComponent(typeof(CanvasGroup))]
-public class Window : AbstractWindow
+public class MonoWindow : AbstractWindow
 {
     private bool isShow => isInitTrue && state == Value.Enable;
     private bool isHide => isInitTrue && state == Value.Disable;
@@ -23,7 +23,7 @@ public class Window : AbstractWindow
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
-    public Window AddHeader(string name)
+    public MonoWindow AddHeader(string name)
     {
         transform.name = $"Window [{name}]";
         return this;

@@ -3,6 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TDC.UI;
 
-public class WindowLoader : Window
+public class WindowLoader : MonoWindow
 {
 }

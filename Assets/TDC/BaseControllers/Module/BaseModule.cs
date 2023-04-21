@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TDC.Module
+namespace TDC.BaseControllers
 {
     public abstract class BaseModule<T> : MonoBehaviour, IModule
     {
@@ -8,8 +8,6 @@ namespace TDC.Module
         protected IModule module;
 
         public virtual void Instance() => module = this;
-
-        public abstract void Add();
-        public abstract void Remove();
+        public abstract void Destroy();
     }
 }

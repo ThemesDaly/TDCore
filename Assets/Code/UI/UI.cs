@@ -3,32 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 
-public class UI : MonoBehaviour
+public class UI : MonoModule
 {
     [BoxGroup(), SerializeField] private Canvas canvas;
-    [BoxGroup(), SerializeField] private Window[] windows;
+    [BoxGroup(), SerializeField] private MonoWindow[] windows;
 
     private List<IWindow> instancesWindows;
 
     private Transform mainCanvas;
 
-    private void Start()
+    public override void Instance()
     {
-        Instance();
-    }
+        base.Instance();
 
-    private void Instance()
-    {
         mainCanvas = Instantiate(canvas, transform).transform;
         mainCanvas.name = $"Canvas [Main]";
 
         instancesWindows = new List<IWindow>();
 
-        foreach (Window window in windows)
+        foreach (MonoWindow window in windows)
             Create(window);
     }
 
-    private void Create(Window window)
+    private void Create(MonoWindow window)
     {
         var instanceWindow = Instantiate(window).AddHeader(window.name);
 
