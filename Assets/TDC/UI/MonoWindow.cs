@@ -24,10 +24,9 @@ public class MonoWindow : AbstractWindow
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
-    public MonoWindow AddHeader(string name)
+    public void AddHeader(string name)
     {
         transform.name = $"Window [{name}]";
-        return this;
     }
 
     [Button("Show"), ShowIf("isHide")]

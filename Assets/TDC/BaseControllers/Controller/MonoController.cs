@@ -63,6 +63,11 @@ public abstract class MonoController : BaseController<MonoController>
         }
     }
 
+    /// <summary>
+    /// Get window by given type
+    /// </summary>
+    /// <typeparam name="TypeModule"></typeparam>
+    /// <returns></returns>
     public override TypeModule GetModule<TypeModule>()
     {
         foreach(var module in modules)

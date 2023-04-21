@@ -12,12 +12,12 @@ public class GameManager : MonoController
         AddModule(pController);
         RemoveModule(pController);
 
-        print(GetModule<UI>().name);
-        print(GetModule<UI>().Show<WindowMenu>().name);
-        print(GetModule<UI>().Show<WindowMenu>().Hide<WindowGameplay>().name);
+        print(GetModule<UIController>().name);
+        print(GetModule<UIController>().Show<WindowMenu>().name);
+        print(GetModule<UIController>().Show<WindowMenu>().Hide<WindowGameplay>().name);
 
-        GetModule<UI>().Show<WindowMenu>().Hide<WindowGameplay>();
+        GetModule<UIController>().Show<WindowMenu>().Hide<WindowGameplay>();
 
-        GetModule<UI>().Get<WindowGameplay>().Show();
+        GetModule<UIController>().Get<WindowGameplay>().Show();
     }
 }

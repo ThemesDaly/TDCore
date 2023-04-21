@@ -4,7 +4,7 @@ using UnityEngine;
 using NaughtyAttributes;
 using TDCore.UI;
 
-public class UI : MonoModule
+public class UIController : MonoModule
 {
     [BoxGroup(), SerializeField] private Canvas canvas;
     [BoxGroup(), SerializeField] private MonoWindow[] windows;
@@ -26,9 +26,10 @@ public class UI : MonoModule
             Create(window);
     }
 
-    private void Create(MonoWindow window)
+    public void Create(MonoWindow window)
     {
-        var instanceWindow = Instantiate(window).AddHeader(window.name);
+        var instanceWindow = Instantiate(window);
+        instanceWindow.AddHeader(window.name);
 
         switch (instanceWindow.space)
         {
@@ -50,7 +51,12 @@ public class UI : MonoModule
         }
     }
 
-    public UI Show<T>()
+    /// <summary>
+    /// Call the show window method
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
+    public UIController Show<T>()
     {
         var getter = Get<T>();
 
@@ -60,7 +66,12 @@ public class UI : MonoModule
         return this;
     }
 
-    public UI Hide<T>()
+    /// <summary>
+    /// Call the hide window method
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
+    public UIController Hide<T>()
     {
         var getter = Get<T>();
 
@@ -70,6 +81,11 @@ public class UI : MonoModule
         return this;
     }
 
+    /// <summary>
+    /// Get window by given type
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
     public T Get<T>()
     {
         foreach (IWindow window in instancesWindows)
