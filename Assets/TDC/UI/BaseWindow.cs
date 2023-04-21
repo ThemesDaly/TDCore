@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TDC.UI
+namespace TDCore.UI
 {
     public abstract class BaseWindow : MonoBehaviour, IWindow
     {

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TDC.UI;
+using TDCore.UI;
 
 public class WindowLoader : MonoWindow
 {

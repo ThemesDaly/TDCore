@@ -31,11 +31,11 @@ public class UI : MonoModule
 
         switch (instanceWindow.space)
         {
-            case TDC.UI.Space.MainCanvas:
+            case TDCore.UI.Space.MainCanvas:
                 instanceWindow.transform.SetParent(mainCanvas);
                 break;
 
-            case TDC.UI.Space.NewCanvas:
+            case TDCore.UI.Space.NewCanvas:
                 Transform newCanvas = Instantiate(canvas, transform).transform;
                 newCanvas.name = $"Canvas [{window.name}]";
                 instanceWindow.transform.SetParent(newCanvas);

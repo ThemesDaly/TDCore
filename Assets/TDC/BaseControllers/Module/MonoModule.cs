@@ -1,4 +1,4 @@
-﻿using TDC.BaseControllers;
+﻿using TDCore.BaseControllers;
 
 public class MonoModule : BaseModule<MonoModule>
 {

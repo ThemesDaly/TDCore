@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using TDC.BaseControllers;
+using TDCore.BaseControllers;
 
 public class PlayerController : MonoModule
 {

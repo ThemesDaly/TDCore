@@ -1,4 +1,4 @@
-﻿namespace TDC.UI
+﻿namespace TDCore.UI
 {
     public enum Value
     {

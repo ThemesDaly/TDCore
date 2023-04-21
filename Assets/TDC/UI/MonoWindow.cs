@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using NaughtyAttributes;
 using DG.Tweening;
-using TDC.UI;
+using TDCore.UI;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class MonoWindow : AbstractWindow

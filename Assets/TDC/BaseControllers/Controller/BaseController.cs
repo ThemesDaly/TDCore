@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TDC.BaseControllers
+namespace TDCore.BaseControllers
 {
     public abstract class BaseController<T> : MonoBehaviour, IController
     {
