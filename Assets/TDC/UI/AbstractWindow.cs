@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace TDCore.UI
 {
-    public abstract class AbstractWindow : BaseWindow
+    public abstract class AbstractWindow : BaseWindow<MonoWindow>
     {
         protected bool isInitTrue => window != null;
         protected bool isInitFalse => window == null;

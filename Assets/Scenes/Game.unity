@@ -197,13 +197,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 560971941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0009e9172b3c34cb4bc44dcea0c4f629, type: 3}
+  m_Script: {fileID: 11500000, guid: cc30884ca5d4042c891fadf6b9ab8156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 6005828586895058445, guid: a519a329ccb604bd3b5c0f98f583edf4, type: 3}
   windows:
-  - {fileID: 7171349080379052716, guid: 4f149529b00e84ae58601814274e4c59, type: 3}
   - {fileID: 3227551518504823556, guid: 65a13b3c3acc848e4bb14a236dfc52c6, type: 3}
+  - {fileID: 7171349080379052716, guid: 4f149529b00e84ae58601814274e4c59, type: 3}
 --- !u!1 &582071563
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,9 +2,9 @@
 
 namespace TDCore.BaseControllers
 {
-    public abstract class BaseModule<T> : MonoBehaviour, IModule
+    public abstract class BaseModule<TypeModule> : MonoBehaviour, IModule
     {
-        protected T type;
+        public TypeModule component { get; protected set; }
         protected IModule module;
 
         public virtual void Instance() => module = this;

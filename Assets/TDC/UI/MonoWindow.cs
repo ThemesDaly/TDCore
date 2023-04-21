@@ -20,6 +20,7 @@ public class MonoWindow : AbstractWindow
     {
         base.Instance();
 
+        component = this;
         canvasGroup = GetComponent<CanvasGroup>();
     }
 

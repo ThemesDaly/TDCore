@@ -2,12 +2,15 @@
 using NaughtyAttributes;
 
 using TDCore.BaseControllers;
+using System;
 
 public class MonoModule : BaseModule<MonoModule>
 {
     public override void Instance()
     {
         base.Instance();
+
+        component = this;
 
         print($"Module {GetType().Name} Instance");
     }

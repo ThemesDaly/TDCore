@@ -62,4 +62,17 @@ public abstract class MonoController : BaseController<MonoController>
             module.Destroy();
         }
     }
+
+    public override TypeModule GetModule<TypeModule>()
+    {
+        foreach(var module in modules)
+        {
+            if(module.component is TypeModule tModule)
+            {
+                return tModule;
+            }
+        }
+
+        return default(TypeModule);
+    }
 }

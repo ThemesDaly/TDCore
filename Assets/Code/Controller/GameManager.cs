@@ -10,7 +10,14 @@ public class GameManager : MonoController
         var pController = player.AddComponent<PlayerController>();
 
         AddModule(pController);
-
         RemoveModule(pController);
+
+        print(GetModule<UI>().name);
+        print(GetModule<UI>().Show<WindowMenu>().name);
+        print(GetModule<UI>().Show<WindowMenu>().Hide<WindowGameplay>().name);
+
+        GetModule<UI>().Show<WindowMenu>().Hide<WindowGameplay>();
+
+        GetModule<UI>().Get<WindowGameplay>().Show();
     }
 }

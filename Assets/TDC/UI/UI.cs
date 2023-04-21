@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
+using TDCore.UI;
 
 public class UI : MonoModule
 {
@@ -47,5 +48,41 @@ public class UI : MonoModule
             iWindow.Instance();
             instancesWindows.Add(iWindow);
         }
+    }
+
+    public UI Show<T>()
+    {
+        var getter = Get<T>();
+
+        if (getter is MonoWindow window)
+            window.Show();
+
+        return this;
+    }
+
+    public UI Hide<T>()
+    {
+        var getter = Get<T>();
+
+        if (getter is MonoWindow window)
+            window.Hide();
+
+        return this;
+    }
+
+    public T Get<T>()
+    {
+        foreach (IWindow window in instancesWindows)
+        {
+            if (window is MonoWindow mWindow)
+            {
+                if (mWindow.component is T component)
+                {
+                    return component;
+                }
+            }
+        }
+
+        return default(T);
     }
 }

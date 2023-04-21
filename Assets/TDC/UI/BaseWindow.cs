@@ -2,8 +2,9 @@
 
 namespace TDCore.UI
 {
-    public abstract class BaseWindow : MonoBehaviour, IWindow
+    public abstract class BaseWindow<T> : MonoBehaviour, IWindow
     {
+        public T component;
         protected IWindow window;
 
         public virtual void Instance() => window = this;
