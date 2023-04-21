@@ -1,9 +1,5 @@
 <h1 align="center">TDCore</h1>
-<h2 align="center">
-
-[![Mentioned in Awesome Vue.js](https://awesome.re/mentioned-badge.svg)](https://github.com/vuejs/awesome-vue)
-
-</h2>
+<br><br>
 
 ## Description
 
@@ -12,9 +8,20 @@
 Good afternoon, everyone. This is my personal game kernel in which I collect useful implementations of various game features in one single architecture.
 
 To implement hyper casual and hybrid projects.
+<br><br><br><br><br>
 
-## How to use
+## Roadmap
 
+- [BaseControllers](#basecontrollers)
+  - [MonoModule](#monomodule)
+  - [MonoController](#monocontroller)
+  
+- [UI](#ui)
+  - [UIController](#uicontroller)
+  - [MonoWindow](#monowindow)
+<br>  
+  
+##  <h2 align="center">BaseControllers</h2>
 ###  MonoModule
 #### Example
 ```
@@ -26,8 +33,10 @@ class PlayerController : MonoModule
 }
 ```
 
-- **Instance()** 
-- **Destroy()** 
+- **void Instance()** 
+- **void ManualUpdate()** 
+- **void Destroy()** 
+<br><h2 align="center"></h2>
 
 ### MonoController
 #### Example
@@ -40,12 +49,38 @@ class GameManager : MonoController
 }
 ```
 
-- *mode* enum(ManualUpdate, Update, FixedUpdate, LateUpdate)
-- **Instance()**
-- **AddModule(IModule module)**
-- **RemoveModule(IModule module)**
-  
-  
+- **mode** enum(ManualUpdate, Update, FixedUpdate, LateUpdate)
+- **void Instance()**
+- **void AddModule(IModule module)**
+- **void RemoveModule(IModule module)**
+<br><h2 align="center"></h2>
+
+## <h2 align="center">UI</h2>
+
+ ### UIController
+ #### Example
+```
+namespace TDCore.UI
+
+class MyUI : UIController
+{
+     void Start()
+     {
+        Show<WindowGameplay>();
+        Hide<WindowMenu>();
+        //or
+        Show<WindowGameplay>().Hide<WindowMenu>().Hide<WindowLoader>();
+      }
+}
+```
+ 
+- **void Instance()**
+- **void Create(MonoWindow window)**
+- **UIController Show<T>()**
+- **UIController Hide<T>()**
+- **T Get<T>()**
+<br><h2 align="center"></h2>
+
  ### MonoWindow
  #### Example
 ```
@@ -57,7 +92,12 @@ class WindowGameplay : MonoWindow
 }
 ```
  
-- **Instance()**
-- **AddHeader()**
-- **Show()**
-- **Hide()**
+- **void Instance()**
+- **void AddHeader(string name)**
+- **void Show()**
+- **void Hide()**
+
+ - event onCompleted
+ - event onShow
+ - event onHide
+<br><h2 align="center"></h2>
