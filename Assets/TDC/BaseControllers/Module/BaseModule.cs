@@ -8,6 +8,7 @@ namespace TDCore.BaseControllers
         protected IModule module;
 
         public virtual void Instance() => module = this;
+        public abstract void ManualUpdate();
         public abstract void Destroy();
     }
 }

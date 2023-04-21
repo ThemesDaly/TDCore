@@ -1,4 +1,7 @@
-﻿using TDCore.BaseControllers;
+﻿using UnityEngine;
+using NaughtyAttributes;
+
+using TDCore.BaseControllers;
 
 public class MonoModule : BaseModule<MonoModule>
 {
@@ -7,6 +10,11 @@ public class MonoModule : BaseModule<MonoModule>
         base.Instance();
 
         print($"Module {GetType().Name} Instance");
+    }
+
+    public override void ManualUpdate()
+    {
+        print($"Module {GetType().Name} Update");
     }
 
     public override void Destroy()

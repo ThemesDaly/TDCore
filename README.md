@@ -40,6 +40,7 @@ class GameManager : MonoController
 }
 ```
 
+- *mode* enum(ManualUpdate, Update, FixedUpdate, LateUpdate)
 - **Instance()**
 - **AddModule(IModule module)**
 - **RemoveModule(IModule module)**
